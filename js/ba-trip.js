@@ -185,7 +185,7 @@ function ClickSaveProfile() {
 
 
 function SaveData() {
-  NewDate();
+  NewDate(); 
   if(EidProfile=="") {
     dbProfile.add({
       lineID : sessionStorage.getItem("LineID"),
