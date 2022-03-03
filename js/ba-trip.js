@@ -40,7 +40,6 @@ async function getUserProfile() {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-  CheckData();
 }
 
 
@@ -65,6 +64,7 @@ function Connect_DB() {
   firebase.initializeApp(firebaseConfig);
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbTripPrudential = firebase.firestore().collection("TripPrudential");
+  CheckData();
   CheckTripPrudential();
 }
 
