@@ -77,7 +77,7 @@ function Connect_DB() {
 
 
 function CheckData() {
-  alert("xxxx");
+  //alert("xxxx");
   console.log(sessionStorage.getItem("LineID"));
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .get().then((snapshot)=> {
@@ -93,6 +93,7 @@ function CheckData() {
       document.getElementById("txtEmpName").value = doc.data().empName;
       document.getElementById("txtEmpPhone").value = doc.data().mpPhone;
       document.getElementById("txtEmpGroup").value = doc.data().empGroup;
+      alert("Old User");
       location.href = 'book-trip.html';
       //alert(doc.data().empID);
     });
@@ -143,7 +144,7 @@ function OpenForm() {
   }
 }
 
-NotPass
+
 
 
 function CheckTripPrudential() {
@@ -201,8 +202,9 @@ function SaveData() {
       statusedit : 1,
       statuspass : 0,
       lastcheckin : dateString,
-      DateRegister :  dateString,
+      DateRegister :  dateString
     });
+    alert("Save Data");
   }
   CheckData();
   document.getElementById('myRegister').style.display='none';
