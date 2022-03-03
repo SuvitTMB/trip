@@ -35,7 +35,6 @@ async function main() {
 
 
 async function getUserProfile() {
-  alert("xxxx");
   var str = "";
   const profile = await liff.getProfile();
   sessionStorage.setItem("LineID", profile.userId);
@@ -78,6 +77,7 @@ function Connect_DB() {
 
 
 function CheckData() {
+  alert("xxxx");
   console.log(sessionStorage.getItem("LineID"));
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .get().then((snapshot)=> {
