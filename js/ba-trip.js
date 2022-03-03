@@ -93,7 +93,7 @@ function CheckData() {
       document.getElementById("txtEmpName").value = doc.data().empName;
       document.getElementById("txtEmpPhone").value = doc.data().mpPhone;
       document.getElementById("txtEmpGroup").value = doc.data().empGroup;
-      alert("Old User");
+      //alert("Old User");
       location.href = 'book-trip.html';
       //alert(doc.data().empID);
     });
@@ -178,7 +178,7 @@ function ClickSaveProfile() {
   if(sCheckBottom==4) {
     SaveData();
   } else {
-  	alert("กรุณากรอกรายละเอียดให้ครบถ้วน "+ sCheckBottom);
+  	alert("กรุณากรอกรายละเอียดให้ครบถ้วน");
   }
 }
 
@@ -204,7 +204,7 @@ function SaveData() {
       lastcheckin : dateString,
       DateRegister :  dateString
     });
-    alert("Save Data");
+    //alert("Save Data");
   }
   CheckData();
   document.getElementById('myRegister').style.display='none';
