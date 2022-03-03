@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/radio.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!--
+  <div class="navbar1">
+    <center>
+      <div style="width:330px;">
+      <div class="iconlink" onClick="window.location='home.html';">
+        <div style="width:28px;"><img src="./img/home.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">หน้าแรก</div>
+      </div>
+      <div class="iconlink" onClick="window.location='rewards.html';">
+        <div style="width:28px;"><img src="./img/awards.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">รางวัล</div>
+      </div>
+      <div class="iconlink" onClick="window.location='leaderboard.html';">
+        <div style="width:28px;"><img src="./img/leader.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">ตารางผู้นำ</div>
+      </div>
+      <div class="iconlink" onClick="window.location='campaign.html';">
+        <div style="width:28px;"><img src="./img/campaign.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">แคมเปญ</div>
+      </div>
+      </div>
+    </center>
+  </div>
+-->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="ba-trip.html">Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="Loading" class="carousel slide text-center" data-ride="carousel" style="display: block;">
+    <div style="margin:200px auto;" id="loading"><img src="./img/loading.gif">
+      <div style="padding-top:15px;color:#f68b1f;">L o a d i n g</div>
+    </div>
+  </div>
+
+  <session id="ShowTrip" style="display: none;">
+    <div class="container" style="max-width:340px; margin:60px auto 10px auto;">
+      <div style="margin-top:30px; text-align: center;">
+        <div id="MyProfile"></div>
+      </div>
+      <center>
+        <div class="btn-t9" style="margin-top:20px;cursor: none;">กรุณาเลือกรายการ</div>
+      </center>
+      <div>
+        <label class="radio-button">
+          <input type="radio" name="SendAnswer" value="1" onclick="buttonRemove()">
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#0ac71a"><u>ยืนยันการเข้าร่วมทริป</u></font></span>
+        </label>
+      </div>
+      <div class="text-trip">แจ้งยืนยันการเข้าร่วม ทริปท่องเที่ยวเนเธอร์แลนด์ (จะไม่มีการคำนวณเป็นส่วนหนึ่งของรายได้)</div>
+
+      <div style="margin-top:20px;">
+        <label class="radio-button">
+          <input type="radio" name="SendAnswer" value="2" onclick="buttonRemove()">
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#ff0000"><u>ยืนยันไม่เข้าร่วมทริป</u></font></span>
+        </label>
+      </div>
+      <div class="text-trip">แจ้งไม่เข้าร่วมทริปท่องเที่ยวเนเธอร์แลนด์ และขอรับเป็นเงินคืน 70% ของมูลค่าทริปท่องเที่ยว โดยยินยอมที่จะนำเงินได้ในส่วนนี้ไปคำนวณรายได้ประจำปี และเสียภาษีเงินได้ตามฐานเงินเดือนของพนักงาน</div>
+    </div>
+    <center>
+      <div class="btn-t0" style="margin-top:20px;" onclick="SendAnswer()" id="SendAns">คลิกยืนยันการตัดสินใจ</div>
+      <div class="EndSelect">คุณสามารถเลือกตัดสินใจได้เพียงครั้งเดียว<br>และจะไม่สามารถยกเลิกรายการที่เลือกได้</div>
+    </center>
+  </session>
+
+
+
+  <session id="ShowResult" style="display: none;">
+    <div class="container" style="max-width:340px; margin:60px auto 10px auto;">
+      <div style="margin-top:30px; text-align: center;">
+        <div id="MyProfile1"></div>
+        <div id="DisplayResultTrip"></div>
+      </div>
+    </div>
+  </session>
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <div style="font-size:12px;font-weight: 600;margin-top:-10px;">
+    <font color="green">LINE</font> <font color="#002d63">Retail</font> 
+    <font color="#0056ff">So</font><font color="#f68b1f">ciety</font>
+  </div>
+</footer>
+
+
+<div id="id01" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content w3-card-4">
+    <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+      <div>
+        <center>
+          <!--<div class="text-4heart1" style="padding:30px 40px 20px 40px; color:#0056ff;">ยืนยันรายการของคุณ</div>-->
+          <div id="DisplayResult"></div>
+        </center>
+      </div>
+      <center>
+        <div class="btn-t2" onclick="CloseAll()" style="margin-top:20px;">ปิดหน้าต่าง</div>
+      </center>
+    </div>
+  </div>
+</div>
+
+
+<script src="./js/book-trip.js"></script>
+
+
+</body>
+</html>
