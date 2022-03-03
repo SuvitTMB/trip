@@ -13,7 +13,7 @@ $(document).ready(function () {
   sessionStorage.setItem("LinePicture", sLinePicture);
   */
   main()
-  Connect_DB();
+  //Connect_DB();
   //CheckData();
 });
 
