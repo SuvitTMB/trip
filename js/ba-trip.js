@@ -14,7 +14,7 @@ $(document).ready(function () {
   */
   main()
   Connect_DB();
-  CheckData();
+  //CheckData();
 });
 
 
