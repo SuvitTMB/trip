@@ -72,7 +72,7 @@ function Connect_DB() {
 
 
 function CheckData() {
-  alert(sessionStorage.getItem("EmpID"));
+  alert(sessionStorage.getItem("LineID"));
   console.log(sessionStorage.getItem("LineID"));
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .get().then((snapshot)=> {
