@@ -40,7 +40,7 @@ async function getUserProfile() {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-  //CheckData();
+  CheckData();
 }
 
 
