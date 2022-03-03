@@ -87,7 +87,7 @@ function CheckData() {
       document.getElementById("txtEmpName").value = doc.data().empName;
       document.getElementById("txtEmpPhone").value = doc.data().mpPhone;
       document.getElementById("txtEmpGroup").value = doc.data().empGroup;
-      //alert(doc.data().empID);
+      WaitingPage();
     });
     OpenForm();
   });
@@ -136,7 +136,11 @@ function OpenForm() {
   }
 }
 
-NotPass
+
+
+function WaitingPage() {
+  location.href = 'book-trip.html';
+}
 
 
 function CheckTripPrudential() {
@@ -147,8 +151,6 @@ function CheckTripPrudential() {
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       sessionStorage.setItem("EmpID", doc.data().empID);
-      //sessionStorage.setItem("EmpName", doc.data().empName);
-      //sessionStorage.setItem("CampName", doc.data().CampName);
     });
   });
 	console.log(sessionStorage.getItem("LineName"));
@@ -157,17 +159,16 @@ function CheckTripPrudential() {
 
 
 function ClickSaveProfile() {
-  sCheckBottom = 0;
-  stxtEmpID = document.getElementById("txtEmpID").value;
-  stxtEmpName = document.getElementById("txtEmpName").value;
-  stxtEmpPhone = document.getElementById("txtEmpPhone").value;
-  stxtEmpGroup = document.getElementById("txtEmpGroup").value;
-  if(stxtEmpID !== null && stxtEmpID !== '') { sCheckBottom = sCheckBottom+1; }
-  if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
-  if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
-  if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
-
-  if(sCheckBottom==4) {
+    sCheckBottom = 0;
+    stxtEmpID = document.getElementById("txtEmpID").value;
+    stxtEmpName = document.getElementById("txtEmpName").value;
+    stxtEmpPhone = document.getElementById("txtEmpPhone").value;
+    stxtEmpGroup = document.getElementById("txtEmpGroup").value;
+    if(stxtEmpID !== null && stxtEmpID !== '') { sCheckBottom = sCheckBottom+1; }
+    if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
+    if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
+    if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
+    if(sCheckBottom==4) {
     SaveData();
   } else {
   	alert("กรุณากรอกรายละเอียดให้ครบถ้วน "+ sCheckBottom);
