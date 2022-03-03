@@ -1,9 +1,11 @@
 var Eid = "";
+var EidProfile = "";
 var CheckFoundData = 0;
 var sCheckBottom = 0;
 var dateString = "";
 
 $(document).ready(function () {
+
   /*
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
   var sLineName = "Website";
@@ -12,15 +14,17 @@ $(document).ready(function () {
   sessionStorage.setItem("LineName", sLineName);
   sessionStorage.setItem("LinePicture", sLinePicture);
   */
+
   main()
-  Connect_DB();
+  //Connect_DB();
   //CheckData();
+  //CheckTripPrudential();
 });
 
 
 
 async function main() {
-  await liff.init({ liffId: "1655966947-jrL43297" });
+  await liff.init({ liffId: "1655966947-YLaLJK8V" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
   if(liff.isLoggedIn()) {
     getUserProfile();
@@ -31,6 +35,7 @@ async function main() {
 
 
 async function getUserProfile() {
+  alert("xxxx");
   var str = "";
   const profile = await liff.getProfile();
   sessionStorage.setItem("LineID", profile.userId);
@@ -39,7 +44,8 @@ async function getUserProfile() {
   str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
-  //Connect_DB();
+  Connect_DB();
+  //CheckData();
 }
 
 
@@ -72,13 +78,12 @@ function Connect_DB() {
 
 
 function CheckData() {
-  alert(sessionStorage.getItem("LineID"));
   console.log(sessionStorage.getItem("LineID"));
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       CheckFoundData = 1;
-      EidCYCProfile = doc.id;
+      EidProfile = doc.id;
       sDateRegister = doc.data().DateRegister;
       sessionStorage.setItem("EmpID", doc.data().empID);
       //sessionStorage.setItem("EmpName", doc.data().empName);
@@ -88,7 +93,7 @@ function CheckData() {
       document.getElementById("txtEmpName").value = doc.data().empName;
       document.getElementById("txtEmpPhone").value = doc.data().mpPhone;
       document.getElementById("txtEmpGroup").value = doc.data().empGroup;
-      WaitingPage();
+      //alert(doc.data().empID);
     });
     OpenForm();
   });
@@ -137,39 +142,38 @@ function OpenForm() {
   }
 }
 
-
-
-function WaitingPage() {
-  location.href = 'book-trip.html';
-}
+NotPass
 
 
 function CheckTripPrudential() {
-  alert("Check Trip "+sessionStorage.getItem("LineID"));
+  //alert("Check Trip "+sessionStorage.getItem("LineID"));
   var str = "";
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       sessionStorage.setItem("EmpID", doc.data().empID);
+      //sessionStorage.setItem("EmpName", doc.data().empName);
+      //sessionStorage.setItem("CampName", doc.data().CampName);
     });
   });
-	//console.log(sessionStorage.getItem("LineName"));
+	console.log(sessionStorage.getItem("LineName"));
 }
 
 
 
 function ClickSaveProfile() {
-    sCheckBottom = 0;
-    stxtEmpID = document.getElementById("txtEmpID").value;
-    stxtEmpName = document.getElementById("txtEmpName").value;
-    stxtEmpPhone = document.getElementById("txtEmpPhone").value;
-    stxtEmpGroup = document.getElementById("txtEmpGroup").value;
-    if(stxtEmpID !== null && stxtEmpID !== '') { sCheckBottom = sCheckBottom+1; }
-    if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
-    if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
-    if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
-    if(sCheckBottom==4) {
+  sCheckBottom = 0;
+  stxtEmpID = document.getElementById("txtEmpID").value;
+  stxtEmpName = document.getElementById("txtEmpName").value;
+  stxtEmpPhone = document.getElementById("txtEmpPhone").value;
+  stxtEmpGroup = document.getElementById("txtEmpGroup").value;
+  if(stxtEmpID !== null && stxtEmpID !== '') { sCheckBottom = sCheckBottom+1; }
+  if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
+  if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
+  if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
+
+  if(sCheckBottom==4) {
     SaveData();
   } else {
   	alert("กรุณากรอกรายละเอียดให้ครบถ้วน "+ sCheckBottom);
@@ -180,7 +184,7 @@ function ClickSaveProfile() {
 
 function SaveData() {
   NewDate();
-  if(Eid=="") {
+  if(EidProfile=="") {
     dbProfile.add({
       lineID : sessionStorage.getItem("LineID"),
       linename : sessionStorage.getItem("LineName"),
