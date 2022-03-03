@@ -14,6 +14,8 @@ $(document).ready(function () {
   */
   main()
   Connect_DB();
+  CheckData();
+  CheckTripPrudential();
   //CheckData();
 });
 
@@ -39,7 +41,7 @@ async function getUserProfile() {
   str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
-  Connect_DB();
+  //Connect_DB();
 }
 
 
@@ -64,8 +66,8 @@ function Connect_DB() {
   firebase.initializeApp(firebaseConfig);
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbTripPrudential = firebase.firestore().collection("TripPrudential");
-  CheckData();
-  CheckTripPrudential();
+  //CheckData();
+  //CheckTripPrudential();
 }
 
 
