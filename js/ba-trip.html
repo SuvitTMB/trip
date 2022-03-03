@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/index@.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.8.1/sdk.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="isLoggedIn" style="color:#ffffff;"></div>
+
+
+<div id="Loading" class="carousel slide text-center" data-ride="carousel" style="display: block;">
+  <div style="margin:200px auto;" id="loading"><img src="./img/loading.gif">
+    <div style="padding-top:15px;color:#f68b1f;">L o a d i n g</div>
+  </div>
+</div>
+
+
+<div class="row" id="myTimer" data-ride="carousel" style="display: none;">
+  <center>
+    <div class="font-4h" style="padding:40px 0px 10px 0px;">
+      <div class="font-4h" style="font-size: 16px; color:#0056ff;">ยินดีต้อนรับสู่ BA Trip</div>
+    </div>
+    <div><img src="./img/travel.png" style="max-width: 320px"></div>
+    <div style="margin-top:30px; width:90%">
+      <div class="text-home" style="color:#002d63;">แบบตอบรับการเข้าร่วม</div>
+      <div class="text-home"><b>ทริปท่องเที่ยวเนเธอร์แลนด์</b></div>
+    </div>
+    <div style="margin:auto;" id="gotopage">
+    <div class="btn-t1" style="margin-top:30px;" onclick="window.location.href='book-trip.html';">ยืนยันการใช้สิทธิ์ของคุณ</div>
+    </div>
+  </center>
+</div>
+
+
+<div id="myRegister" class="carousel slide text-center" data-ride="carousel" style="display: none;margin-top:30px;">
+  <div class="clr"></div>
+  <div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <div class="title-head"><font color="#0056ff">ลงทะเบียนเข้าใช้งาน<br>LINE Retail Society</font></div>
+      </div>
+      <div class="row clearfix" style="margin-top:-15px;">
+        <div class="">
+          <center>
+            <div id="MyProfile"></div>
+          </center>
+          <form style="margin-top:20px;" class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="input_field" style="width:100% !important;"> 
+                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                <input required type="number" class="form-control" id="txtEmpID" placeholder="รหัสพนักงาน"/>
+                <div class="valid-feedback"></div>
+              </div>
+              <div class="input_field" style="width:100% !important;"> 
+                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" class="form-control" id="txtEmpName" placeholder="ชื่อ-นามสกุล" required/>
+              </div>
+              <div class="input_field" style="width:100% !important;"> 
+                <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                <input type="number" class="form-control" id="txtEmpPhone" placeholder="หมายเลขโทรศัพท์" required/>
+              </div>
+              <div class="input_field select_option">
+                <select id="txtEmpGroup" class="form-control" style="font: 400 12px ekachon-regular !important;" required/>
+                  <option></option>
+                    <option value="ttb bank">พนักงาน ttb bank</option>
+                    <option value="OTHER-Outsider">บุคคลภายนอกธนาคาร</option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+            </div>
+            <center>
+            <div style="font-weight: 600; color:#ff0000; padding:20px;width:100% !important;">
+              ขอสงวนสิทธิ์สำหรับผู้ที่มีส่วนเกี่ยวข้องเท่านั้น
+            </div>
+            </center>
+            <!--<button class="btn-t1" onclick="ClickSaveProfile()">ลงทะเบียน</button>-->
+            <div class="btn-t1" onclick="ClickSaveProfile()" type="submit">ลงทะเบียน</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row" id="NotPass" data-ride="carousel" style="display: none;">
+  <center>
+    <div class="font-4h" style="padding:40px 0px 10px 0px;">
+      <div class="font-4h" style="font-size: 16px; color:#0056ff;">ยินดีต้อนรับสู่ BA Trip</div>
+    </div>
+    <div style="margin-top:20px;"><img src="./img/stop.png" style="max-width: 280px"></div>
+    <div style="margin-top:30px; width:90%">
+      <div class="text-home" style="color:#002d63;">คุณไม่ได้รับสิทธิ์</div>
+      <div class="text-home"><b>ในการตอบแบบสอบถามนี้</b></div>
+    </div>
+    <!--
+    <div style="margin:auto;" id="gotopage">
+    <div class="btn-t1" style="margin-top:30px;" onclick="window.location.href='book-trip.html';">ยืนยันการใช้สิทธิ์ของคุณ</div>
+    </div>
+    -->
+  </center>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <div style="font-size:12px;font-weight: 600;margin-top:-10px;">
+    <font color="green">LINE</font> <font color="#002d63">Retail</font> 
+    <font color="#0056ff">So</font><font color="#f68b1f">ciety</font>
+  </div>
+</footer>
+
+<script src="./js/ba-trip.js"></script>
+<script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+
+<script type="text/javascript">
+	//setTimeout("location.href = 'mainpage.html';",15000);
+</script>
+</body>
+</html>
