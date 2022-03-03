@@ -93,6 +93,7 @@ function CheckData() {
       document.getElementById("txtEmpName").value = doc.data().empName;
       document.getElementById("txtEmpPhone").value = doc.data().mpPhone;
       document.getElementById("txtEmpGroup").value = doc.data().empGroup;
+      location.href = 'book-trip.html';
       //alert(doc.data().empID);
     });
     OpenForm();
