@@ -65,7 +65,7 @@ function Connect_DB() {
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbTripPrudential = firebase.firestore().collection("TripPrudential");
   //CheckData();
-  CheckTripPrudential();
+  //CheckTripPrudential();
 }
 
 
@@ -145,7 +145,7 @@ function WaitingPage() {
 
 
 function CheckTripPrudential() {
-  //alert("Check Trip "+sessionStorage.getItem("LineID"));
+  alert("Check Trip "+sessionStorage.getItem("LineID"));
   var str = "";
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
@@ -154,7 +154,7 @@ function CheckTripPrudential() {
       sessionStorage.setItem("EmpID", doc.data().empID);
     });
   });
-	console.log(sessionStorage.getItem("LineName"));
+	//console.log(sessionStorage.getItem("LineName"));
 }
 
 
