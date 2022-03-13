@@ -6,11 +6,10 @@ var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }
 $(document).ready(function () {
 	//alert(sessionStorage.getItem("EmpID"));
 	if(sessionStorage.getItem("LineID")==null) { location.href = 'ba-trip.html'; }
-	var str = "";
-	str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
-	//str += '<div class="NameLine">'+ sessionStorage.getItem("LineName") +'</div>';
-	str += '<div class="text-name"><b>คุณ'+ sessionStorage.getItem("EmpName") +'</b></div>';
-	$("#MyProfile").html(str);  
+	//var str = "";
+	//str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
+	//str += '<div class="text-name"><b>คุณ'+ sessionStorage.getItem("EmpName") +'</b></div>';
+	//$("#MyProfile").html(str);  
 	Connect_DB();
 });
 
@@ -71,6 +70,11 @@ function CheckTripPrudential() {
 		sessionStorage.setItem("EmpZone", doc.data().EmpZone);
 		sessionStorage.setItem("EmpRH", doc.data().EmpRH);
 		sessionStorage.setItem("ConfirmTrip", doc.data().ConfirmTrip);
+		var str1 = "";
+		str1 += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
+		str1 += '<div class="text-name"><b>คุณ'+ sessionStorage.getItem("EmpName") +'</b></div>';
+		$("#MyProfile").html(str1);  
+
 		if(doc.data().ConfirmTrip==0) {
 			document.getElementById('Loading').style.display='none';
 			document.getElementById('WelcomeTrip').style.display='none';
