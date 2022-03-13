@@ -4,7 +4,6 @@ var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }
 
 
 $(document).ready(function () {
-	//alert(sessionStorage.getItem("EmpID"));
 	if(sessionStorage.getItem("LineID")==null) { location.href = 'ba-trip.html'; }
 	//var str = "";
 	//str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
