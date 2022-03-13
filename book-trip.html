@@ -59,7 +59,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="ba-trip.html">Retail Society</a>
+        <a class="navbar-brand" href="ba-trip.html" style="font-size:14px;">LINE Retail Society</a>
       </div>
     </div>
   </nav>
@@ -71,29 +71,81 @@
     </div>
   </div>
 
+
+  <session id="StopApp" style="display: none;">
+    <div class="row">
+      <center>
+        <div class="font-4h" style="padding:70px 0px 10px 0px;">
+          <div class="font-4h" style="font-size: 15px; color:#0056ff;"></div>
+        </div>
+        <div style="margin-top:20px;"><img src="./img/stop.png" style="max-width: 280px"></div>
+        <div style="margin-top:30px; width:90%">
+          <div class="text-home" style="color:#002d63;">คุณไม่ได้รับสิทธิ์</div>
+          <div class="text-home"><b>ในการตอบแบบสอบถามนี้</b></div>
+        </div>
+      </center>
+    </div>
+  </session>
+
+
+  <session id="WelcomeTrip" style="display: none;">
+    <div class="container" style="max-width:360px; margin:60px auto 10px auto;">
+      <div><img src="./img/survey-trip.png" style="width:100%;"></div>
+      <center>
+        <div style="margin-top:10px; color:#ff0000; font-size: 12px;margin-top:20px;font-weight: 600;">ผู้ได้สิทธิ์สามารถทำการตอบแบบสำรวจได้เพียงครั้งเดียว<br>และจะไม่สามารถเปลี่ยนแปลงได้อีก<br>ขอให้ทำการตัดสินใจก่อนเข้าทำแบบสำรวจทริปนี้</div>
+        <div class="btn-t1" style="margin-top:20px;" onclick="CheckTripPrudential()">ทำแบบสำรวจทริปของคุณ</div>
+      </center>
+    </div>
+  </session>
+
+
   <session id="ShowTrip" style="display: none;">
     <div class="container" style="max-width:340px; margin:60px auto 10px auto;">
       <div style="margin-top:30px; text-align: center;">
         <div id="MyProfile"></div>
       </div>
       <center>
-        <div class="btn-t9" style="margin-top:20px;cursor: none;">กรุณาเลือกรายการ</div>
+        <div class="btn-t9" style="margin-top:20px;cursor: none;font-size: 12px;padding:6px 40px;line-height: 1.3;">กรุณาตอบแบบสำรวจ<br>ทริปท่องเที่ยวต่างประเทศ</div>
+        <div style="margin:10px auto; color:#ff0000; font-size: 11px;font-weight: 600;">ให้คลิกเลือกรายการที่ต้องการ และกดยืนยันการตัดสินใจ</div>
       </center>
       <div>
         <label class="radio-button">
           <input type="radio" name="SendAnswer" value="1" onclick="buttonRemove()">
-          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#0ac71a"><u>ยืนยันการเข้าร่วมทริป</u></font></span>
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#0ac71a"><u>ยืนยันการเข้าร่วมทริปต่างประเทศ</u></font></span>
         </label>
       </div>
-      <div class="text-trip">แจ้งยืนยันการเข้าร่วม ทริปท่องเที่ยวเนเธอร์แลนด์ (จะไม่มีการคำนวณเป็นส่วนหนึ่งของรายได้)</div>
+      <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการเข้าร่วมทริป ก่อนดำเนินการยืนยันการตัดสินใจ</div>
+      <div class="btn-t2" id="btnOK" style="font-size:11px;margin-left:44px;background-color: #0ac71a;border: 1px solid #fff;" onClick="showHideDiv('divMsg')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
+      <div class="text-trip" id="divMsg" style="font-size: 11px; color:#002d63;margin-top:20px;display:none;">
+        <ul style="margin-left:-30px;">
+          <li>ทริปประเทศเนเธอแลนด์-เบลเยี่ยม เดินทางช่วงเดือนพฤษภาคม - มิถุนายน 2565</li>
+          <li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>
+          <li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ </li>
+          <li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต , ค่าเดินทางมาทำวีซ่า , ค่าเดินทางมาเข้าร่วมทริป , ค่าใช้จ่ายส่วนตัวระหว่างทริป , ค่าตรวจโควิด-19 (ถ้ามี) </li>
+          <li>ในระหว่างทริป หากเกิดอาการป่วย บาดเจ็บ ติดโควิด-19 หรือด้วยสาเหตุอื่นๆ ซึ่งมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ ผู้ได้รับรางวัลต้องรับผิดชอบค่าใช้จ่ายที่เกิดขึ้นทั้งหมด ที่เกินจากค่าประกันสุขภาพและประกันอุบัติเหตุที่ได้ทำไว้ระหว่างการเดินทาง เช่น ค่าเดินทางในการส่งตัวเข้ารับการรักษา  , ค่าตั๋วเครื่องบินขากลับ , ค่าใช้จ่ายส่วนตัวและอื่นๆ ที่เกี่ยวข้อง</li>
+          <li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง 40 ท่าน </li>
+          <li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>
+          <li>ภายหลังยืนยันการเข้าร่วมแล้ว กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง เช่น ติดโควิด-19 , ติดภารกิจสำคัญ , ตั้งครรภ์ ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง 1 เดือน กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้</li>
+        </ul>
+      </div>
 
       <div style="margin-top:20px;">
         <label class="radio-button">
           <input type="radio" name="SendAnswer" value="2" onclick="buttonRemove()">
-          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#ff0000"><u>ยืนยันไม่เข้าร่วมทริป</u></font></span>
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#ff0000"><u>ยืนยันไม่เข้าร่วมทริปต่างประเทศ</u></font></span>
         </label>
       </div>
-      <div class="text-trip">แจ้งไม่เข้าร่วมทริปท่องเที่ยวเนเธอร์แลนด์ และขอรับเป็นเงินคืน 70% ของมูลค่าทริปท่องเที่ยว โดยยินยอมที่จะนำเงินได้ในส่วนนี้ไปคำนวณรายได้ประจำปี และเสียภาษีเงินได้ตามฐานเงินเดือนของพนักงาน</div>
+      <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการไม่เข้าร่วมทริป ก่อนดำเนินการยืนยันการตัดสินใจ</div>
+      <div class="btn-t2" style="font-size:11px;margin-left:44px;background-color: #ff0000;border: 1px solid #fff;" onClick="showHideDiv('divMsg1')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
+
+      <div class="text-trip" id="divMsg1" style="font-size: 11px; color:#002d63;display: none;margin-top:20px;">
+        <ul style="margin-left:-30px;">
+          <li>ขอรับรางวัลเป็นเงิน 70% ของมูลค่าทริป (มูลค่าทริป 85,000 x 70% = 59,500 บาท)</li>
+          <li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม 2565</li>
+          <li>เงินรางวัลจะถูกนำไปคำนวณเป็นรายได้ประจำปีและจะต้องเสียภาษีเงินได้ตามฐานเงินเดือนของพนักงาน</li>
+          <li>กรณียืนยันการรับเป็นเงิน 70% แล้วจะไม่สามารถ เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>
+        </ul>
+      </div>
     </div>
     <center>
       <div class="btn-t0" style="margin-top:20px;" onclick="SendAnswer()" id="SendAns">คลิกยืนยันการตัดสินใจ</div>
@@ -137,6 +189,7 @@
       </center>
     </div>
   </div>
+  <div class="clr" style="height: 30px;"></div>
 </div>
 
 
