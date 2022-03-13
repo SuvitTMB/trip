@@ -7,18 +7,20 @@ var dateString = "";
 $(document).ready(function () {
 
   /*
+  var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
   var sLineName = "Website";
   var sLinePicture = "https://profile.line-scdn.net/0hoLlg-mNNMGNRHiaTpMdPNG1bPg4mMDYrKX8qVnIYOgYpe3QwbCp2AXVKaVN_fnMzOC16V3NMagF8";
   sessionStorage.setItem("LineID", sLineID);
   sessionStorage.setItem("LineName", sLineName);
   sessionStorage.setItem("LinePicture", sLinePicture);
+  str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" style="width:100px; height:100px;"></div>';
+  str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
+  $("#MyProfile").html(str);  
+  Connect_DB();
   */
 
   main()
-  //Connect_DB();
-  //CheckData();
-  //CheckTripPrudential();
 });
 
 
@@ -185,6 +187,7 @@ function ClickSaveProfile() {
 
 
 function SaveData() {
+  //alert("save = "+EidProfile);
   NewDate();
   if(EidProfile=="") {
     dbProfile.add({
@@ -204,15 +207,18 @@ function SaveData() {
       lastcheckin : dateString,
       DateRegister :  dateString
     });
-    //alert("Save Data");
+    //alert("Save Data" + document.getElementById("txtEmpID").value);
   }
-  CheckData();
   document.getElementById('myRegister').style.display='none';
-  document.getElementById('myTimer').style.display='none';
+  document.getElementById('myTimer').style.display='block';
+  //GotoCheck();
 }
 
 
 
+function GotoCheck() {
+  CheckData();
+}
 
 
 function NewDate() {
