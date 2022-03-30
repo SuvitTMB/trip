@@ -31,35 +31,11 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!--
-  <div class="navbar1">
-    <center>
-      <div style="width:330px;">
-      <div class="iconlink" onClick="window.location='home.html';">
-        <div style="width:28px;"><img src="./img/home.png" style="width:22px;"></div>
-        <div style="font-size: 11px;">หน้าแรก</div>
-      </div>
-      <div class="iconlink" onClick="window.location='rewards.html';">
-        <div style="width:28px;"><img src="./img/awards.png" style="width:22px;"></div>
-        <div style="font-size: 11px;">รางวัล</div>
-      </div>
-      <div class="iconlink" onClick="window.location='leaderboard.html';">
-        <div style="width:28px;"><img src="./img/leader.png" style="width:22px;"></div>
-        <div style="font-size: 11px;">ตารางผู้นำ</div>
-      </div>
-      <div class="iconlink" onClick="window.location='campaign.html';">
-        <div style="width:28px;"><img src="./img/campaign.png" style="width:22px;"></div>
-        <div style="font-size: 11px;">แคมเปญ</div>
-      </div>
-      </div>
-    </center>
-  </div>
--->
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="ba-trip.html" style="font-size:14px;">LINE Retail Society</a>
+        <a class="navbar-brand" href="ba-trip.html" style="font-size:13px;">LINE Retail Society</a>
       </div>
     </div>
   </nav>
@@ -92,7 +68,8 @@
     <div class="container" style="max-width:360px; margin:60px auto 10px auto;">
       <div><img src="./img/survey-trip.png" style="width:100%;"></div>
       <center>
-        <div style="margin-top:10px; color:#ff0000; font-size: 12px;margin-top:20px;font-weight: 600;">ผู้ได้สิทธิ์สามารถทำการตอบแบบสำรวจได้เพียงครั้งเดียว<br>และจะไม่สามารถเปลี่ยนแปลงได้อีก<br>ขอให้ทำการตัดสินใจก่อนเข้าทำแบบสำรวจทริปนี้</div>
+        <div style="margin-top:10px; color:#ff0000; font-size: 12px;margin-top:20px;font-weight: 600;">ผู้ได้สิทธิ์สามารถทำการตอบแบบสำรวจได้เพียงครั้งเดียว<br>ขอให้ตอบภายแบบสอบถามระหว่างวันที่ 1 – 4 เม.ย. 65
+ นี้<br>และการตอบนี้จะไม่สามารถเปลี่ยนแปลงได้อีก<br>ขอให้ทำการตัดสินใจก่อนเข้าทำแบบสำรวจทริปนี้</div>
         <div class="btn-t1" style="margin-top:20px;" onclick="CheckTripPrudential()">ทำแบบสำรวจทริปของคุณ</div>
       </center>
     </div>
@@ -100,56 +77,88 @@
 
 
   <session id="ShowTrip" style="display: none;">
-    <div class="container" style="max-width:340px; margin:60px auto 10px auto;">
+    <div class="container" style="max-width:360px; margin:60px auto 10px auto;">
       <div style="margin-top:30px; text-align: center;">
         <div id="MyProfile"></div>
       </div>
       <center>
-        <div class="btn-t9" style="margin-top:20px;cursor: none;font-size: 12px;padding:6px 40px;line-height: 1.3;">กรุณาตอบแบบสำรวจ<br>ทริปท่องเที่ยวต่างประเทศ</div>
-        <div style="margin:10px auto; color:#ff0000; font-size: 11px;font-weight: 600;">ให้คลิกเลือกรายการที่ต้องการ และกดยืนยันการตัดสินใจ</div>
+        <div class="btn-t9" style="background-color: #444; margin-top:20px;cursor: none;font-size: 12px;padding:6px 40px;line-height: 1.3;">กรุณาตอบแบบสำรวจทริป<br>ระหว่างวันที่ 1 – 4 เม.ย. 65</div>
+        <div style="margin:5px auto; color:#ff0000; font-size: 11px;font-weight: 600;">ให้คลิกเลือกรายการที่ต้องการ และกดยืนยันการตัดสินใจ</div>
       </center>
-      <div>
+      <div style="margin-top:20px;">
         <label class="radio-button">
           <input type="radio" name="SendAnswer" value="1" onclick="buttonRemove()">
-          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#0ac71a"><u>ยืนยันการเข้าร่วมทริปต่างประเทศ</u></font></span>
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#0ac71a"><u>ยืนยันเข้าร่วมทริป</u></font></span>
         </label>
       </div>
+      <!--
       <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการเข้าร่วมทริป ก่อนดำเนินการยืนยันการตัดสินใจ</div>
-      <div class="btn-t2" id="btnOK" style="font-size:11px;margin-left:44px;background-color: #0ac71a;border: 1px solid #fff;" onClick="showHideDiv('divMsg')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
+      -->
+      <div class="btn-t2" id="btnOK" style="margin-top:-30px;font-size:11px;margin-left:44px;background-color: #0ac71a;border: 1px solid #fff;" onClick="showHideDiv('divMsg')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
       <div class="text-trip" id="divMsg" style="font-size: 11px; color:#002d63;margin-top:20px;display:none;">
         <ul style="margin-left:-30px;">
-          <li>ทริปประเทศเนเธอร์แลนด์-เบลเยี่ยม เดินทางช่วงเดือนพฤษภาคม - มิถุนายน 2565</li>
+          <li>ทริปท่องเที่ยวประเทศเนเธอแลนด์-เบลเยี่ยม จำนวน 8 วัน 5 คืน กำหนดเดินทางช่วงเดือนมิถุนายน 2565</li>
           <li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>
-          <li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ </li>
-          <li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต, ค่าเดินทางมาทำวีซ่า, ค่าเดินทางมาเข้าร่วมทริป, ค่าใช้จ่ายส่วนตัวระหว่างทริป, ค่าตรวจโควิด-19 (ถ้ามี) </li>
-          <li>ในระหว่างทริป หากเกิดอาการป่วย บาดเจ็บ ติดโควิด-19 หรือด้วยสาเหตุอื่นๆ ซึ่งมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ ผู้ได้รับรางวัลต้องรับผิดชอบค่าใช้จ่ายที่เกิดขึ้นทั้งหมด ที่เกินจากค่าประกันสุขภาพและประกันอุบัติเหตุที่ได้ทำไว้ระหว่างการเดินทาง เช่น ค่าเดินทางในการส่งตัวเข้ารับการรักษา, ค่าตั๋วเครื่องบินขากลับ, ค่าใช้จ่ายส่วนตัวและอื่นๆ ที่เกี่ยวข้อง</li>
-          <li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง 40 ท่าน </li>
+          <li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานคงเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ กรณียังไม่มีพาสปอร์ตหรือหมดอายุ ขอให้รีบดำเนินการ</li>
+          <li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต , ค่าเดินทางมาทำวีซ่า , ค่าเดินทางมาเข้าร่วมทริป , ค่าใช้จ่ายส่วนตัวระหว่างทริป , ค่าตรวจโควิด-19 (ถ้ามี)</li>
+          <li>ประกันการเดินทางคุ้มครองค่ารักษาพยาบาลและอุบัติเหตุ ในกรณีที่ท่านติดโควิด-19 และมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ แบ่งเป็น 2 กรณี ดังนี้
+            <ul>
+              <li>กรณีอาการหนัก ต้องนำส่งโรงพยาบาลเพื่อแอดมิด ประกันการเดินทางคุ้มครองการรักษาโควิดตามเงื่อนไข  ทั้งนี้ผู้ได้รับรางวัลอาจต้องรับผิดชอบค่าใช้จ่ายในการรักษาที่นอกเหนือจากวงเงินที่ทำประกัน และค่าส่วนต่างในการเลื่อนตั๋วเครื่องบินขากลับ</li>
+              <li>กรณีอาการไม่หนัก ต้องแยกที่พักและรักษาแบบ Home Isolation หรืออาจต้องเดินทางกลับประเทศไทยก่อนโปรแกรมทัวร์สิ้นสุด</li>
+            </ul>
+          </li>
+          <li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง 40 ท่าน และทุกท่านที่ได้รับรางวัลจะได้รับเป็นเงินสด 100% หรือมูลค่า 85,000 บาท</li>
           <li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>
-          <li>ภายหลังยืนยันการเข้าร่วมแล้ว กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง เช่น ติดโควิด-19, ติดภารกิจสำคัญ, ตั้งครรภ์ ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง 1 เดือน กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้</li>
+          <li>ภายหลังยืนยันการเข้าร่วมแล้ว กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง เช่น ติดโควิด-19 , ติดภารกิจสำคัญ , ตั้งครรภ์ ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง 1 เดือน กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ จะไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้ ทั้งนี้ผู้บริหารจะพิจารณาเป็น Case by Case</li>
+          <li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>
         </ul>
       </div>
 
       <div style="margin-top:20px;">
         <label class="radio-button">
           <input type="radio" name="SendAnswer" value="2" onclick="buttonRemove()">
-          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#ff0000"><u>ยืนยันไม่เข้าร่วมทริปต่างประเทศ</u></font></span>
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#002d63"><u>ยืนยันเข้าร่วมทริปและขอเปลี่ยนแปลงชื่อผู้เดินทาง</u></font></span>
         </label>
       </div>
-      <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการไม่เข้าร่วมทริป ก่อนดำเนินการยืนยันการตัดสินใจ</div>
-      <div class="btn-t2" style="font-size:11px;margin-left:44px;background-color: #ff0000;border: 1px solid #fff;" onClick="showHideDiv('divMsg1')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
-
-      <div class="text-trip" id="divMsg1" style="font-size: 11px; color:#002d63;display: none;margin-top:20px;">
+      <!--
+      <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการเปลี่ยนแปลงรายชื่อผู้เดินทาง</div>
+    -->
+      <div class="btn-t2" style="margin-top:-30px;font-size:11px;margin-left:44px;background-color: #002d63;border: 1px solid #fff;" onClick="showHideDiv('divMsg2')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
+      <div class="text-trip" id="divMsg2" style="font-size: 11px; color:#002d63;display: none;margin-top:20px;">
         <ul style="margin-left:-30px;">
-          <li>ขอรับรางวัลเป็นเงิน 70% ของมูลค่าทริป (มูลค่าทริป 85,000 x 70% = 59,500 บาท)</li>
-          <li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม 2565</li>
-          <li>เงินรางวัลจะถูกนำไปคำนวณเป็นรายได้ประจำปีและจะต้องเสียภาษีเงินได้ตามฐานเงินเดือนของพนักงาน</li>
-          <li>กรณียืนยันการรับเป็นเงิน 70% แล้วจะไม่สามารถ เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>
+          <li>ขอให้ดำเนินการส่งอีเมลแจ้งความประสงค์ไปยัง ZH และ RH ตามลำดับ เมื่อได้รับอนุมัติแล้ว ส่งเรื่องมาที่อีเมล supattra.kan@ttbbank.com (คุณสุพัตรา กาญจนวีรวิทย์ รหัสพนักงาน 25718) ภายในวันที่ 05 เม.ย. 65</li>
+          <li>ผู้ที่เดินทางแทน จะต้องเป็นพนักงาน ttb เท่านั้น และจะต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>
+          <li>กรณีเปลี่ยนแปลงชื่อผู้เดินทางแล้ว จะไม่สามารถเปลี่ยนแปลงได้อีกในภายหลังทุกกรณี</li>
+          <li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>
         </ul>
       </div>
+
+      <div style="margin-top:20px;">
+        <label class="radio-button">
+          <input type="radio" name="SendAnswer" value="3" onclick="buttonRemove()">
+          <span class="label-visible"><span class="fake-radiobutton"></span><font color="#ff0000"><u>ยืนยันไม่เข้าร่วมทริปและขอรับรางวัลเป็นเงินสด</u></font></span>
+        </label>
+      </div>
+      <!--
+      <div class="text-trip">กรุณาศึกษารายละเอียดการแจ้งยืนยันการไม่เข้าร่วมทริป ก่อนดำเนินการยืนยันการตัดสินใจ</div>
+      -->
+      <div class="btn-t2" style="margin-top:-30px;font-size:11px;margin-left:44px;background-color: #ff0000;border: 1px solid #fff;" onClick="showHideDiv('divMsg1')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
+      <div class="text-trip" id="divMsg1" style="font-size: 11px; color:#002d63;display: none;margin-top:20px;">
+        <ul style="margin-left:-30px;">
+          <li>ผู้ได้รับรางวัลจะได้รับรางวัลเป็นเงินสด 80% ของมูลค่าทริป (มูลค่าทริป 85,000 x 80% = 68,000 บาท)</li>
+          <li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม 2565</li>
+          <li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>
+          <li>กรณียืนยันการรับเป็นเงินสด 80% แล้วจะไม่สามารถ เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>
+          <li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>
+        </ul>
+      </div>
+
     </div>
+
+
     <center>
-      <div class="btn-t0" style="margin-top:20px;" onclick="SendAnswer()" id="SendAns">คลิกยืนยันการตัดสินใจ</div>
-      <div class="EndSelect">คุณสามารถเลือกตัดสินใจได้เพียงครั้งเดียว<br>และจะไม่สามารถยกเลิกรายการที่เลือกได้</div>
+      <div class="btn-t0" style="margin-top:30px;" onclick="SendAnswer()" id="SendAns">คลิกยืนยันการตัดสินใจ</div>
+      <div class="EndSelect" style="width:300px; margin:15px auto;">กรณีท่านที่ไม่ได้ตอบแบบสำรวจภายในระยะเวลาที่กำหนด ถือว่าประสงค์ที่จะขอรับเป็นเงินสด 80% และพรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</div>
     </center>
   </session>
 
@@ -169,7 +178,7 @@
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
   <div style="font-size:12px;font-weight: 600;margin-top:-10px;">
-    <font color="green">LINE</font> <font color="#002d63">Retail</font> 
+    @<font color="#0ac71a">LINE</font> <font color="#002d63">Retail</font> 
     <font color="#0056ff">So</font><font color="#f68b1f">ciety</font>
   </div>
 </footer>
@@ -177,7 +186,7 @@
 
 <div id="id01" class="w3-modal w3-animate-opacity">
   <div class="w3-modal-content w3-card-4">
-    <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+    <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;max-width:400px;margin:auto;">
       <div>
         <center>
           <!--<div class="text-4heart1" style="padding:30px 40px 20px 40px; color:#0056ff;">ยืนยันรายการของคุณ</div>-->
