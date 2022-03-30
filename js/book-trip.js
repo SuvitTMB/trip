@@ -1,8 +1,6 @@
 var Eid="";
 var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
 
-
-
 $(document).ready(function () {
 	alert(sessionStorage.getItem("EmpID")+" "+sessionStorage.getItem("EmpName"));
 	if(sessionStorage.getItem("LineID")==null) { location.href = 'ba-trip.html'; }
@@ -13,8 +11,6 @@ $(document).ready(function () {
 	$("#MyProfile").html(str);  
 	Connect_DB(); 
 });
-
-
 
 function Connect_DB() {
   var firebaseConfig = {
@@ -31,7 +27,6 @@ function Connect_DB() {
   dbTripPrudential = firebase.firestore().collection("TripPrudential");
   WelcomeTrip();
 }
-
 
 var checkapp = 0;
 function WelcomeTrip() {
@@ -55,7 +50,6 @@ function WelcomeTrip() {
     }
   });
 }
-
 
 
 function CheckTripPrudential() {
