@@ -44,7 +44,7 @@ function WelcomeTrip() {
 			CheckTripPrudential();
 		}
     });
-    if(checkapp==0) {
+    if(checkapp==0) { 
 		document.getElementById('Loading').style.display='none';
 		document.getElementById('StopApp').style.display='block';
     }
