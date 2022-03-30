@@ -157,7 +157,7 @@ function CheckTripPrudential() {
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       sessionStorage.setItem("EmpID", doc.data().empID);
-      //sessionStorage.setItem("EmpName", doc.data().empName);
+      sessionStorage.setItem("EmpName", doc.data().empName);
       //sessionStorage.setItem("CampName", doc.data().CampName);
     });
   });
