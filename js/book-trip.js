@@ -11,7 +11,7 @@ $(document).ready(function () {
 	//str += '<div class="NameLine">'+ sessionStorage.getItem("LineName") +'</div>';
 	str += '<div class="text-name"><b>คุณ'+ sessionStorage.getItem("EmpName") +'</b></div>';
 	$("#MyProfile").html(str);  
-	Connect_DB();
+	Connect_DB(); 
 });
 
 
