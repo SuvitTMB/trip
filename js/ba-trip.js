@@ -141,8 +141,8 @@ function OpenForm() {
 	  });
   } else {
    	document.getElementById('loading').style.display='none';
-    document.getElementById('myRegister').style.display='block';
-    document.getElementById('myTimer').style.display='none';
+        document.getElementById('myRegister').style.display='block';
+        document.getElementById('myTimer').style.display='none';
   }
 }
 
