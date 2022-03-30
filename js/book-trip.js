@@ -1,1 +1,286 @@
-var _0x3458ed=_0x1ed8;(function(_0x25cb0b,_0x58ce37){var _0x1ad2dc=_0x1ed8,_0xbeded5=_0x25cb0b();while(!![]){try{var _0x4a97db=-parseInt(_0x1ad2dc(0x19a))/0x1*(parseInt(_0x1ad2dc(0x175))/0x2)+parseInt(_0x1ad2dc(0x16f))/0x3+parseInt(_0x1ad2dc(0x16c))/0x4+-parseInt(_0x1ad2dc(0x169))/0x5*(-parseInt(_0x1ad2dc(0x15d))/0x6)+parseInt(_0x1ad2dc(0x18f))/0x7+parseInt(_0x1ad2dc(0x1ad))/0x8*(-parseInt(_0x1ad2dc(0x170))/0x9)+-parseInt(_0x1ad2dc(0x1a7))/0xa;if(_0x4a97db===_0x58ce37)break;else _0xbeded5['push'](_0xbeded5['shift']());}catch(_0x13d429){_0xbeded5['push'](_0xbeded5['shift']());}}}(_0x270b,0x64463));var Eid='',dateString=new Date()[_0x3458ed(0x1b7)](_0x3458ed(0x179),{'timeZone':'Asia/Jakarta'});$(document)[_0x3458ed(0x17a)](function(){var _0x57c365=_0x3458ed;sessionStorage[_0x57c365(0x1aa)](_0x57c365(0x1a9))==null&&(location[_0x57c365(0x189)]=_0x57c365(0x183)),Connect_DB();});function Connect_DB(){var _0x41b932=_0x3458ed,_0x59f416={'apiKey':_0x41b932(0x162),'authDomain':'retailproject-6f4fc.firebaseapp.com','projectId':_0x41b932(0x180),'storageBucket':_0x41b932(0x19e),'messagingSenderId':_0x41b932(0x1c0),'appId':'1:653667385625:web:a5aed08500de80839f0588','measurementId':_0x41b932(0x1b6)};firebase[_0x41b932(0x18d)](_0x59f416),dbProfile=firebase['firestore']()[_0x41b932(0x1ab)](_0x41b932(0x1bf)),dbTripPrudential=firebase[_0x41b932(0x1b2)]()[_0x41b932(0x1ab)](_0x41b932(0x1a1)),WelcomeTrip();}var checkapp=0x0;function WelcomeTrip(){var _0x557129=_0x3458ed;dbTripPrudential['where'](_0x557129(0x19f),'==',parseFloat(sessionStorage[_0x557129(0x1aa)](_0x557129(0x19f))))[_0x557129(0x1b3)](0x1)[_0x557129(0x15c)]()['then'](_0x33377c=>{var _0x58ad76=_0x557129;_0x33377c[_0x58ad76(0x1ac)](_0x10eb64=>{var _0x5b2a1d=_0x58ad76;checkapp=0x1,document[_0x5b2a1d(0x16a)]('Loading')[_0x5b2a1d(0x187)][_0x5b2a1d(0x186)]=_0x5b2a1d(0x1bd),document[_0x5b2a1d(0x16a)](_0x5b2a1d(0x1be))[_0x5b2a1d(0x187)][_0x5b2a1d(0x186)]=_0x5b2a1d(0x1bd),_0x10eb64['data']()['ConfirmTrip']==0x0?document[_0x5b2a1d(0x16a)](_0x5b2a1d(0x166))[_0x5b2a1d(0x187)]['display']='block':(document['getElementById']('WelcomeTrip')['style'][_0x5b2a1d(0x186)]=_0x5b2a1d(0x1bd),CheckTripPrudential());}),checkapp==0x0&&(document[_0x58ad76(0x16a)](_0x58ad76(0x197))[_0x58ad76(0x187)][_0x58ad76(0x186)]=_0x58ad76(0x1bd),document[_0x58ad76(0x16a)](_0x58ad76(0x1be))[_0x58ad76(0x187)][_0x58ad76(0x186)]=_0x58ad76(0x192));});}function CheckTripPrudential(){var _0x3a0a7b=_0x3458ed,_0x10aff2='';dbTripPrudential['where'](_0x3a0a7b(0x19f),'==',parseFloat(sessionStorage[_0x3a0a7b(0x1aa)](_0x3a0a7b(0x19f))))[_0x3a0a7b(0x1b3)](0x1)[_0x3a0a7b(0x15c)]()[_0x3a0a7b(0x188)](_0x4b3c3c=>{var _0x52719c=_0x3a0a7b;_0x4b3c3c[_0x52719c(0x1ac)](_0x1f3c72=>{var _0x58361b=_0x52719c;Eid=_0x1f3c72['id'],sessionStorage[_0x58361b(0x174)](_0x58361b(0x19c),_0x1f3c72[_0x58361b(0x160)]()[_0x58361b(0x19c)]),sessionStorage['setItem']('EmpPosition',_0x1f3c72['data']()[_0x58361b(0x17f)]),sessionStorage['setItem'](_0x58361b(0x1a0),_0x1f3c72['data']()[_0x58361b(0x1a0)]),sessionStorage[_0x58361b(0x174)](_0x58361b(0x17e),_0x1f3c72[_0x58361b(0x160)]()['EmpZone']),sessionStorage['setItem'](_0x58361b(0x1a6),_0x1f3c72[_0x58361b(0x160)]()[_0x58361b(0x1a6)]),sessionStorage[_0x58361b(0x174)](_0x58361b(0x19b),_0x1f3c72[_0x58361b(0x160)]()['ConfirmTrip']);var _0x11b9da='';_0x11b9da+='<div><img\x20src=\x22'+sessionStorage[_0x58361b(0x1aa)]('LinePicture')+_0x58361b(0x1ba),_0x11b9da+='<div\x20class=\x22text-name\x22><b>คุณ'+sessionStorage[_0x58361b(0x1aa)](_0x58361b(0x19c))+_0x58361b(0x1b9),$(_0x58361b(0x164))[_0x58361b(0x163)](_0x11b9da);if(_0x1f3c72[_0x58361b(0x160)]()[_0x58361b(0x19b)]==0x0)document['getElementById'](_0x58361b(0x197))['style']['display']=_0x58361b(0x1bd),document[_0x58361b(0x16a)](_0x58361b(0x166))[_0x58361b(0x187)][_0x58361b(0x186)]='none',document['getElementById'](_0x58361b(0x191))[_0x58361b(0x187)][_0x58361b(0x186)]=_0x58361b(0x192),document[_0x58361b(0x16a)](_0x58361b(0x1ae))[_0x58361b(0x187)][_0x58361b(0x186)]=_0x58361b(0x1bd);else{_0x10aff2+=_0x58361b(0x161),_0x10aff2+=_0x58361b(0x19d)+sessionStorage[_0x58361b(0x1aa)](_0x58361b(0x168))+_0x58361b(0x1ba),_0x10aff2+=_0x58361b(0x1c1)+sessionStorage['getItem']('EmpName')+_0x58361b(0x17b)+sessionStorage['getItem'](_0x58361b(0x1a0))+'',_0x10aff2+=_0x58361b(0x1b8)+sessionStorage['getItem'](_0x58361b(0x17e))+_0x58361b(0x1b8)+sessionStorage[_0x58361b(0x1aa)](_0x58361b(0x1a6))+'',_0x10aff2+=_0x58361b(0x1af);if(_0x1f3c72['data']()['ConfirmTrip']==0x1)_0x10aff2+=_0x58361b(0x18e),_0x10aff2+=_0x58361b(0x171),_0x10aff2+=_0x58361b(0x18c),_0x10aff2+='<li>ทริปประเทศเนเธอร์แลนด์-เบลเยี่ยม\x20เดินทางช่วงเดือนพฤษภาคม\x20-\x20มิถุนายน\x202565</li>',_0x10aff2+='<li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน\x20ttb\x20จนถึงวันเดินทาง</li>',_0x10aff2+='<li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานเหลือไม่น้อยกว่า\x206\x20เดือน\x20นับจากวันเดินทางกลับ\x20</li>',_0x10aff2+=_0x58361b(0x1bc),_0x10aff2+=_0x58361b(0x176),_0x10aff2+='<li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป\x20กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง\x2040\x20ท่าน</li>',_0x10aff2+=_0x58361b(0x1c2),_0x10aff2+=_0x58361b(0x194),_0x10aff2+=_0x58361b(0x177),_0x10aff2+=_0x58361b(0x195)+_0x1f3c72[_0x58361b(0x160)]()[_0x58361b(0x15f)]+_0x58361b(0x1af);else _0x1f3c72[_0x58361b(0x160)]()[_0x58361b(0x19b)]==0x2&&(_0x10aff2+=_0x58361b(0x16b),_0x10aff2+='<div\x20class=\x22text-notrip\x22>คุณจะได้รับเงินคืน\x2070%\x20ของทริปท่องเที่ยว\x20และจะนำรายได้นี้ไปคำนวณเพื่อเสียภาษีเงินได้ของคุณต่อไป</div>',_0x10aff2+=_0x58361b(0x171),_0x10aff2+=_0x58361b(0x18c),_0x10aff2+=_0x58361b(0x172),_0x10aff2+='<li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม\x202565</li>',_0x10aff2+=_0x58361b(0x17c),_0x10aff2+=_0x58361b(0x1c4),_0x10aff2+=_0x58361b(0x177),_0x10aff2+='<div>ทำรายการเมื่อ\x20:\x20'+_0x1f3c72['data']()[_0x58361b(0x15f)]+_0x58361b(0x1af));document['getElementById'](_0x58361b(0x197))[_0x58361b(0x187)][_0x58361b(0x186)]=_0x58361b(0x1bd),document[_0x58361b(0x16a)](_0x58361b(0x191))['style'][_0x58361b(0x186)]=_0x58361b(0x1bd),document[_0x58361b(0x16a)](_0x58361b(0x166))['style'][_0x58361b(0x186)]='none',document['getElementById'](_0x58361b(0x1ae))[_0x58361b(0x187)][_0x58361b(0x186)]='block',$(_0x58361b(0x1a2))[_0x58361b(0x163)](_0x10aff2);}});});}function SendAnswer(){var _0x463d6c=_0x3458ed;NewDate();var _0x5886c7='',_0x4f8dd8='',_0x47413a=Math[_0x463d6c(0x16d)](Date[_0x463d6c(0x193)]()/0x3e8);_0x4f8dd8=document[_0x463d6c(0x1a3)](_0x463d6c(0x15b))[_0x463d6c(0x1a8)];if(_0x4f8dd8==null)alert(_0x463d6c(0x165));else{dbTripPrudential['doc'](Eid)[_0x463d6c(0x16e)]({'LineID':sessionStorage[_0x463d6c(0x1aa)](_0x463d6c(0x1a9)),'LineName':sessionStorage[_0x463d6c(0x1aa)](_0x463d6c(0x1b0)),'LinePicture':sessionStorage['getItem'](_0x463d6c(0x168)),'ConfirmTrip':parseInt(_0x4f8dd8),'DateConfirm':dateString,'DateTimeStamp':_0x47413a});if(_0x4f8dd8==0x1)_0x5886c7+=_0x463d6c(0x15e),_0x5886c7+=_0x463d6c(0x1c3)+sessionStorage[_0x463d6c(0x1aa)]('EmpName')+_0x463d6c(0x17b)+sessionStorage['getItem'](_0x463d6c(0x1a0))+'',_0x5886c7+=_0x463d6c(0x1b8)+sessionStorage[_0x463d6c(0x1aa)]('EmpZone')+_0x463d6c(0x1b8)+sessionStorage[_0x463d6c(0x1aa)](_0x463d6c(0x1a6))+'',_0x5886c7+=_0x463d6c(0x1af),_0x5886c7+=_0x463d6c(0x18e),_0x5886c7+='<div\x20class=\x22text-notrip\x22\x20style=\x22font-size:\x2011px;\x20color:#002d63;text-align:left;\x22>',_0x5886c7+=_0x463d6c(0x18c),_0x5886c7+='<li>ทริปประเทศเนเธอร์แลนด์-เบลเยี่ยม\x20เดินทางช่วงเดือนพฤษภาคม\x20-\x20มิถุนายน\x202565</li>',_0x5886c7+=_0x463d6c(0x198),_0x5886c7+='<li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานเหลือไม่น้อยกว่า\x206\x20เดือน\x20นับจากวันเดินทางกลับ\x20</li>',_0x5886c7+=_0x463d6c(0x1bc),_0x5886c7+=_0x463d6c(0x176),_0x5886c7+=_0x463d6c(0x185),_0x5886c7+='<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้\x20ตามฐานเงินเดือนของพนักงาน</li>',_0x5886c7+=_0x463d6c(0x194),_0x5886c7+=_0x463d6c(0x177),_0x5886c7+=_0x463d6c(0x195)+dateString+_0x463d6c(0x1af);else _0x4f8dd8==0x2&&(_0x5886c7+='<div\x20class=\x22btn-t9\x22\x20style=\x22margin-top:20px;cursor:\x20none;\x22>ยืนยันการทำรายการของคุณ</div>',_0x5886c7+=_0x463d6c(0x1c3)+sessionStorage['getItem'](_0x463d6c(0x19c))+_0x463d6c(0x17b)+sessionStorage[_0x463d6c(0x1aa)]('EmpBranch')+'',_0x5886c7+=_0x463d6c(0x1b8)+sessionStorage[_0x463d6c(0x1aa)](_0x463d6c(0x17e))+_0x463d6c(0x1b8)+sessionStorage['getItem']('EmpRH')+'',_0x5886c7+=_0x463d6c(0x1af),_0x5886c7+=_0x463d6c(0x167),_0x5886c7+=_0x463d6c(0x171),_0x5886c7+=_0x463d6c(0x18c),_0x5886c7+=_0x463d6c(0x172),_0x5886c7+='<li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม\x202565</li>',_0x5886c7+=_0x463d6c(0x17c),_0x5886c7+='<li>กรณียืนยันการรับเป็นเงิน\x2070%\x20แล้วจะไม่สามารถ\x20เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>',_0x5886c7+=_0x463d6c(0x177),_0x5886c7+='<div>ทำรายการเมื่อ\x20:\x20'+dateString+_0x463d6c(0x1af));$(_0x463d6c(0x184))[_0x463d6c(0x163)](_0x5886c7),CheckTripPrudential(),document[_0x463d6c(0x16a)](_0x463d6c(0x178))[_0x463d6c(0x187)][_0x463d6c(0x186)]=_0x463d6c(0x192);}}function _0x1ed8(_0x18e0c3,_0x5c340f){var _0x270b74=_0x270b();return _0x1ed8=function(_0x1ed84c,_0x4170f1){_0x1ed84c=_0x1ed84c-0x15b;var _0x4d114c=_0x270b74[_0x1ed84c];return _0x4d114c;},_0x1ed8(_0x18e0c3,_0x5c340f);}function buttonRemove(){var _0x8cd11f=_0x3458ed,_0xe8974e=document['getElementById'](_0x8cd11f(0x173));_0xe8974e['classList'][_0x8cd11f(0x182)](_0x8cd11f(0x196));var _0xe8974e=document[_0x8cd11f(0x16a)]('SendAns');_0xe8974e[_0x8cd11f(0x1bb)]['add']('btn-t1');}function _0x270b(){var _0xfdc3ed=['EmpID','EmpBranch','TripPrudential','#DisplayResultTrip','querySelector','getSeconds','getMinutes','EmpRH','1067010EcXhvE','value','LineID','getItem','collection','forEach','584ZQvSaf','ShowResult','</div>','LineName','getHours','firestore','limit','Hide','Show','G-9SKTRHHSW9','toLocaleString','<br>','</b></div>','\x22\x20class=\x22add-profile\x22></div>','classList','<li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ\x20ที่เกี่ยวข้องด้วยตนเอง\x20เช่น\x20ค่าทำพาสปอร์ต,\x20ค่าเดินทางมาทำวีซ่า,\x20ค่าเดินทางมาเข้าร่วมทริป,\x20ค่าใช้จ่ายส่วนตัวระหว่างทริป,\x20ค่าตรวจโควิด-19\x20(ถ้ามี)</li>','none','StopApp','CheckProfile','653667385625','<div\x20class=\x22text-name\x22><b>คุณ','<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้\x20ตามฐานเงินเดือนของพนักงาน</li>','<div\x20class=\x22text-name\x22><b>','<li>กรณียืนยันการรับเป็นเงิน\x2070%\x20แล้วจะไม่สามารถ\x20เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>','input[name=\x22SendAnswer\x22]:checked','get','4707090bXjGQi','<div\x20class=\x22btn-t9\x22\x20style=\x22margin-top:20px;cursor:\x20none;\x22>ยืนยันการทำรายการของคุณ</div>','DateConfirm','data','<div\x20class=\x22btn-t9\x22\x20style=\x22margin-top:-10px;cursor:\x20none;\x22>ยืนยันการทำรายการของคุณ</div>','AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','html','#MyProfile','กรุณาเลือกรายการก่อนบันทึกรายการ','WelcomeTrip','<div\x20class=\x22btn-t7\x22\x20style=\x22margin:15px\x200;\x22>ระบบได้ยืนยันการไม่เข้าร่วม<br>ทริปเนเธอร์แลนด์ของคุณ<br>เรียบร้อยแล้ว</div>','LinePicture','5OLGuTF','getElementById','<div\x20class=\x22btn-t7\x22\x20style=\x22margin:15px\x200;\x22>ระบบได้ยืนยันการไม่เข้าร่วม<br>ทริปท่องเที่ยวต่างประเทศ<br>ของคุณ<br>เรียบร้อยแล้ว</div>','333172fYrJDT','round','update','753759Jlqduk','57771FKIbfT','<div\x20class=\x22text-notrip\x22\x20style=\x22font-size:\x2011px;\x20color:#002d63;text-align:left;\x22>','<li>ขอรับรางวัลเป็นเงิน\x2070%\x20ของมูลค่าทริป\x20(มูลค่าทริป\x2085,000\x20x\x2070%\x20=\x2059,500\x20บาท)</li>','SendAns','setItem','694412iMZOlT','<li>ในระหว่างทริป\x20หากเกิดอาการป่วย\x20บาดเจ็บ\x20ติดโควิด-19\x20หรือด้วยสาเหตุอื่นๆ\x20ซึ่งมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ\x20ผู้ได้รับรางวัลต้องรับผิดชอบค่าใช้จ่ายที่เกิดขึ้นทั้งหมด\x20ที่เกินจากค่าประกันสุขภาพและประกันอุบัติเหตุที่ได้ทำไว้ระหว่างการเดินทาง\x20เช่น\x20ค่าเดินทางในการส่งตัวเข้ารับการรักษา,\x20ค่าตั๋วเครื่องบินขากลับ,\x20ค่าใช้จ่ายส่วนตัวและอื่นๆ\x20ที่เกี่ยวข้อง</li>','</ul></div>','id01','en-US','ready','</b><br>','<li>เงินรางวัลจะถูกนำไปคำนวณเป็นรายได้ประจำปีและจะต้องเสียภาษีเงินได้ตามฐานเงินเดือนของพนักงาน</li>','click','EmpZone','EmpPosition','retailproject-6f4fc','text','remove','ba-trip.html','#DisplayResult','<li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป\x20กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง\x2040\x20ท่าน</li>','display','style','then','href','#MsgOK','getMonth','<ul\x20style=\x22margin-left:-30px;\x22>','initializeApp','<div\x20class=\x22btn-t8\x22\x20style=\x22margin:15px\x200;\x22>ระบบได้ยืนยันการเข้าร่วม<br>ทริปเนเธอร์แลนด์ของคุณ<br>เรียบร้อยแล้ว</div>','1499092OywMSr','length','ShowTrip','block','now','<li>ภายหลังยืนยันการเข้าร่วมแล้ว\x20กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง\x20เช่น\x20ติดโควิด-19,\x20ติดภารกิจสำคัญ,\x20ตั้งครรภ์\x20ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง\x201\x20เดือน\x20กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้</li>','<div>ทำรายการเมื่อ\x20:\x20','btn-t0','Loading','<li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน\x20ttb\x20จนถึงวันเดินทาง</li>','#btnOK','1uPlRLv','ConfirmTrip','EmpName','<div\x20style=\x22margin-top:20px;\x22><img\x20src=\x22','retailproject-6f4fc.appspot.com'];_0x270b=function(){return _0xfdc3ed;};return _0x270b();}$(_0x3458ed(0x191))['on'](_0x3458ed(0x17d),_0x3458ed(0x199),function(){var _0x2dd525=_0x3458ed;$(_0x2dd525(0x18a))['toggle']();var _0x28b3b6=$(this)[_0x2dd525(0x181)]();_0x28b3b6==_0x2dd525(0x1b5)?$(this)['text'](_0x2dd525(0x1b4)):$(this)[_0x2dd525(0x181)](_0x2dd525(0x1b5));});function CloseAll(){var _0x26950b=_0x3458ed;document[_0x26950b(0x16a)]('id01')['style'][_0x26950b(0x186)]=_0x26950b(0x1bd);}function showHideDiv(_0x1b0a74){var _0x4980ba=_0x3458ed,_0x309d8a=document[_0x4980ba(0x16a)](_0x1b0a74);if(_0x309d8a!=null)return _0x309d8a['style'][_0x4980ba(0x186)]==_0x4980ba(0x192)?_0x309d8a[_0x4980ba(0x187)]['display']='none':_0x309d8a[_0x4980ba(0x187)][_0x4980ba(0x186)]=_0x4980ba(0x192),![];}function NewDate(){var _0x53399d=_0x3458ed,_0x17e29f=new Date(),_0x414a9e=_0x17e29f['getDate']()+'',_0x1744ad=_0x17e29f[_0x53399d(0x18b)]()+0x1+'',_0x4b38ed=_0x17e29f['getFullYear']()+'',_0x2981f4=_0x17e29f[_0x53399d(0x1b1)]()+'',_0x516791=_0x17e29f[_0x53399d(0x1a5)]()+'',_0x1a5724=_0x17e29f[_0x53399d(0x1a4)]()+'',_0x1a3039=_0x2981f4>=0xc?'PM':'AM';_0x414a9e=checkZero(_0x414a9e),_0x1744ad=checkZero(_0x1744ad),_0x4b38ed=checkZero(_0x4b38ed),_0x2981f4=checkZero(_0x2981f4),_0x516791=checkZero(_0x516791),_0x1a5724=checkZero(_0x1a5724),dateString=_0x414a9e+'/'+_0x1744ad+'/'+_0x4b38ed+'\x20'+_0x2981f4+':'+_0x516791+':'+_0x1a5724+'\x20'+_0x1a3039;}function checkZero(_0x79b4d3){var _0x5afa46=_0x3458ed;return _0x79b4d3[_0x5afa46(0x190)]==0x1&&(_0x79b4d3='0'+_0x79b4d3),_0x79b4d3;}
+var Eid="";
+var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
+
+
+
+$(document).ready(function () {
+	//alert(sessionStorage.getItem("EmpID"));
+	if(sessionStorage.getItem("LineID")==null) { location.href = 'ba-trip.html'; }
+	var str = "";
+	str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
+	//str += '<div class="NameLine">'+ sessionStorage.getItem("LineName") +'</div>';
+	str += '<div class="text-name"><b>คุณ'+ sessionStorage.getItem("EmpName") +'</b></div>';
+	$("#MyProfile").html(str);  
+	Connect_DB();
+});
+
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  dbProfile = firebase.firestore().collection("CheckProfile");
+  dbTripPrudential = firebase.firestore().collection("TripPrudential");
+  WelcomeTrip();
+}
+
+
+var checkapp = 0;
+function WelcomeTrip() {
+  dbTripPrudential.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID")))
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+    	checkapp = 1;
+		document.getElementById('Loading').style.display='none';
+		document.getElementById('StopApp').style.display='none';
+		if(doc.data().ConfirmTrip==0) {
+			document.getElementById('WelcomeTrip').style.display='block';
+		} else {
+			document.getElementById('WelcomeTrip').style.display='none';
+			CheckTripPrudential();
+		}
+    });
+    if(checkapp==0) {
+		document.getElementById('Loading').style.display='none';
+		document.getElementById('StopApp').style.display='block';
+    }
+  });
+}
+
+
+
+function CheckTripPrudential() {
+  var str = "";
+  dbTripPrudential.where('EmpID','==',parseFloat(sessionStorage.getItem("EmpID")))
+  .limit(1)
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+		Eid = doc.id;
+		sessionStorage.setItem("EmpName", doc.data().EmpName);
+		sessionStorage.setItem("EmpPosition", doc.data().EmpPosition);
+		sessionStorage.setItem("EmpBranch", doc.data().EmpBranch);
+		sessionStorage.setItem("EmpZone", doc.data().EmpZone);
+		sessionStorage.setItem("EmpRH", doc.data().EmpRH);
+		sessionStorage.setItem("ConfirmTrip", doc.data().ConfirmTrip);
+		if(doc.data().ConfirmTrip==0) {
+			document.getElementById('Loading').style.display='none';
+			document.getElementById('WelcomeTrip').style.display='none';
+			document.getElementById('ShowTrip').style.display='block';
+			document.getElementById('ShowResult').style.display='none';
+		} else {
+			str += '<div class="btn-t9" style="margin-top:-10px;cursor: none;">ยืนยันการทำรายการของคุณ</div>';
+			str += '<div style="margin-top:20px;"><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile"></div>';
+			str += '<div class="text-name"><b>คุณ'+sessionStorage.getItem("EmpName")+'</b><br>'+sessionStorage.getItem("EmpBranch")+'';
+			str += '<br>'+sessionStorage.getItem("EmpZone")+'<br>'+sessionStorage.getItem("EmpRH")+'';
+			str += '</div>';
+
+			if(doc.data().ConfirmTrip==1) {
+				str += '<div class="btn-t8" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันเข้าร่วมทริป<br>เรียบร้อยแล้ว</div>';
+				str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+				str += '<ul style="margin-left:-30px;">';
+				str += '<li>ทริปท่องเที่ยวประเทศเนเธอแลนด์-เบลเยี่ยม จำนวน 8 วัน 5 คืน กำหนดเดินทางช่วงเดือนมิถุนายน 2565</li>';
+				str += '<li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>';
+				str += '<li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานคงเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ กรณียังไม่มีพาสปอร์ตหรือหมดอายุ ขอให้รีบดำเนินการ</li>';
+				str += '<li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต , ค่าเดินทางมาทำวีซ่า , ค่าเดินทางมาเข้าร่วมทริป , ค่าใช้จ่ายส่วนตัวระหว่างทริป , ค่าตรวจโควิด-19 (ถ้ามี)</li>';
+				str += '<li>ประกันการเดินทางคุ้มครองค่ารักษาพยาบาลและอุบัติเหตุ ในกรณีที่ท่านติดโควิด-19 และมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ แบ่งเป็น 2 กรณี ดังนี้';
+				str += '<ul>';
+				str += '<li>กรณีอาการหนัก ต้องนำส่งโรงพยาบาลเพื่อแอดมิด ประกันการเดินทางคุ้มครองการรักษาโควิดตามเงื่อนไข  ทั้งนี้ผู้ได้รับรางวัลอาจต้องรับผิดชอบค่าใช้จ่ายในการรักษาที่นอกเหนือจากวงเงินที่ทำประกัน และค่าส่วนต่างในการเลื่อนตั๋วเครื่องบินขากลับ</li>';
+				str += '<li>กรณีอาการไม่หนัก ต้องแยกที่พักและรักษาแบบ Home Isolation หรืออาจต้องเดินทางกลับประเทศไทยก่อนโปรแกรมทัวร์สิ้นสุด</li>';
+				str += '</ul><li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง 40 ท่าน และทุกท่านที่ได้รับรางวัลจะได้รับเป็นเงินสด 100% หรือมูลค่า 85,000 บาท</li>';
+				str += '<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>';
+				str += '<li>ภายหลังยืนยันการเข้าร่วมแล้ว กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง เช่น ติดโควิด-19 , ติดภารกิจสำคัญ , ตั้งครรภ์ ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง 1 เดือน กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ จะไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้ ทั้งนี้ผู้บริหารจะพิจารณาเป็น Case by Case</li>';
+				str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+				str += '</ul></div>';
+				str += '<div>ทำรายการเมื่อ : '+doc.data().DateConfirm+'</div>';
+			} else if(doc.data().ConfirmTrip==2) { 
+				str += '<div class="btn-t77" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันเข้าร่วมทริปและขอเปลี่ยนแปลงชื่อผู้เดินทาง เรียบร้อยแล้ว</div>';
+				str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+				str += '<ul style="margin-left:-30px;">';
+				str += '<li>ขอให้ดำเนินการส่งอีเมลแจ้งความประสงค์ไปยัง ZH และ RH ตามลำดับ เมื่อได้รับอนุมัติแล้ว ส่งเรื่องมาที่อีเมล supattra.kan@ttbbank.com (คุณสุพัตรา กาญจนวีรวิทย์ รหัสพนักงาน 25718) ภายในวันที่ 05 เม.ย. 65</li>';
+				str += '<li>ผู้ที่เดินทางแทน จะต้องเป็นพนักงาน ttb เท่านั้น และจะต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>';
+				str += '<li>กรณีเปลี่ยนแปลงชื่อผู้เดินทางแล้ว จะไม่สามารถเปลี่ยนแปลงได้อีกในภายหลังทุกกรณี</li>';
+				str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+				str += '</ul></div>';
+				str += '<div>ทำรายการเมื่อ : '+doc.data().DateConfirm+'</div>';
+			} else if(doc.data().ConfirmTrip==3) { 
+				str += '<div class="btn-t7" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันไม่เข้าร่วมทริปและ<br>ขอรับรางวัลเป็นเงินสด<br>เรียบร้อยแล้ว</div>';
+				str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+				str += '<ul style="margin-left:-30px;">';
+				str += '<li>ผู้ได้รับรางวัลจะได้รับรางวัลเป็นเงินสด 80% ของมูลค่าทริป (มูลค่าทริป 85,000 x 80% = 68,000 บาท)</li>';
+				str += '<li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม 2565</li>';
+				str += '<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>';
+				str += '<li>กรณียืนยันการรับเป็นเงินสด 80% แล้วจะไม่สามารถ เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>';
+				str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+				str += '</ul></div>';
+				str += '<div>ทำรายการเมื่อ : '+doc.data().DateConfirm+'</div>';
+			}
+			document.getElementById('Loading').style.display='none';
+			document.getElementById('ShowTrip').style.display='none';
+			document.getElementById('WelcomeTrip').style.display='none';
+			document.getElementById('ShowResult').style.display='block';
+    		$("#DisplayResultTrip").html(str);  
+		}
+    });
+  });
+}
+
+
+function SendAnswer() {
+    NewDate();
+	var str = "";
+	var sSendAnswer = "";
+    var TimeStampDate = Math.round(Date.now() / 1000);
+	sSendAnswer = document.querySelector('input[name="SendAnswer"]:checked').value;
+	if(sSendAnswer==null) {
+		alert("กรุณาเลือกรายการก่อนบันทึกรายการ");
+	} else {
+		dbTripPrudential.doc(Eid).update({
+			LineID : sessionStorage.getItem("LineID"),
+			LineName : sessionStorage.getItem("LineName"),
+			LinePicture : sessionStorage.getItem("LinePicture"),
+			ConfirmTrip : parseInt(sSendAnswer),
+			DateConfirm : dateString,
+			DateTimeStamp : TimeStampDate
+		});     
+		if(sSendAnswer==1) {
+			str += '<div class="btn-t9" style="margin-top:20px;cursor: none;">ยืนยันการทำรายการของคุณ</div>';
+			str += '<div class="text-name"><b>'+sessionStorage.getItem("EmpName")+'</b><br>'+sessionStorage.getItem("EmpBranch")+'';
+			str += '<br>'+sessionStorage.getItem("EmpZone")+'<br>'+sessionStorage.getItem("EmpRH")+'';
+			str += '</div>';
+
+			str += '<div class="btn-t8" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันเข้าร่วมทริป<br>เรียบร้อยแล้ว</div>';
+			str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+			str += '<ul style="margin-left:-30px;">';
+			str += '<li>ทริปท่องเที่ยวประเทศเนเธอแลนด์-เบลเยี่ยม จำนวน 8 วัน 5 คืน กำหนดเดินทางช่วงเดือนมิถุนายน 2565</li>';
+			str += '<li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>';
+			str += '<li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานคงเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ กรณียังไม่มีพาสปอร์ตหรือหมดอายุ ขอให้รีบดำเนินการ</li>';
+			str += '<li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต , ค่าเดินทางมาทำวีซ่า , ค่าเดินทางมาเข้าร่วมทริป , ค่าใช้จ่ายส่วนตัวระหว่างทริป , ค่าตรวจโควิด-19 (ถ้ามี)</li>';
+			str += '<li>ประกันการเดินทางคุ้มครองค่ารักษาพยาบาลและอุบัติเหตุ ในกรณีที่ท่านติดโควิด-19 และมีความจำเป็นต้องรับการตรวจหรือรักษาที่ต่างประเทศ แบ่งเป็น 2 กรณี ดังนี้';
+			str += '<ul>';
+			str += '<li>กรณีอาการหนัก ต้องนำส่งโรงพยาบาลเพื่อแอดมิด ประกันการเดินทางคุ้มครองการรักษาโควิดตามเงื่อนไข  ทั้งนี้ผู้ได้รับรางวัลอาจต้องรับผิดชอบค่าใช้จ่ายในการรักษาที่นอกเหนือจากวงเงินที่ทำประกัน และค่าส่วนต่างในการเลื่อนตั๋วเครื่องบินขากลับ</li>';
+			str += '<li>กรณีอาการไม่หนัก ต้องแยกที่พักและรักษาแบบ Home Isolation หรืออาจต้องเดินทางกลับประเทศไทยก่อนโปรแกรมทัวร์สิ้นสุด</li>';
+			str += '</ul><li>ขอสงวนสิทธิ์ยกเลิกการจัดทริป กรณีมีผู้ตอบรับการเข้าร่วมไม่ถึง 40 ท่าน และทุกท่านที่ได้รับรางวัลจะได้รับเป็นเงินสด 100% หรือมูลค่า 85,000 บาท</li>';
+			str += '<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>';
+			str += '<li>ภายหลังยืนยันการเข้าร่วมแล้ว กรณีไม่สามารถเดินทางได้เนื่องจากเหตุสุดวิสัยในช่วงก่อนเดินทาง เช่น ติดโควิด-19 , ติดภารกิจสำคัญ , ตั้งครรภ์ ขอสงวนสิทธิ์การเปลี่ยนแปลงก่อนการเดินทาง 1 เดือน กรณีที่แจ้งขอเปลี่ยนหลังจากนี้ จะไม่สามารถรับเงินคืนเป็นเงินสดและไม่สามารถเปลี่ยนผู้เดินทางได้ ทั้งนี้ผู้บริหารจะพิจารณาเป็น Case by Case</li>';
+			str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+			str += '</ul></div>';
+			str += '<div>ทำรายการเมื่อ : '+dateString+'</div>';
+		} else if(sSendAnswer==2) { 
+			str += '<div class="btn-t9" style="margin-top:20px;cursor: none;">ยืนยันการทำรายการของคุณ</div>';
+			str += '<div class="text-name"><b>'+sessionStorage.getItem("EmpName")+'</b><br>'+sessionStorage.getItem("EmpBranch")+'';
+			str += '<br>'+sessionStorage.getItem("EmpZone")+'<br>'+sessionStorage.getItem("EmpRH")+'';
+			str += '</div>';
+			str += '<div class="btn-t77" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันเข้าร่วมทริปและขอเปลี่ยนแปลงชื่อผู้เดินทาง เรียบร้อยแล้ว</div>';
+			str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+			str += '<ul style="margin-left:-30px;">';
+			str += '<li>ขอให้ดำเนินการส่งอีเมลแจ้งความประสงค์ไปยัง ZH และ RH ตามลำดับ เมื่อได้รับอนุมัติแล้ว ส่งเรื่องมาที่อีเมล supattra.kan@ttbbank.com (คุณสุพัตรา กาญจนวีรวิทย์ รหัสพนักงาน 25718) ภายในวันที่ 05 เม.ย. 65</li>';
+			str += '<li>ผู้ที่เดินทางแทน จะต้องเป็นพนักงาน ttb เท่านั้น และจะต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>';
+			str += '<li>กรณีเปลี่ยนแปลงชื่อผู้เดินทางแล้ว จะไม่สามารถเปลี่ยนแปลงได้อีกในภายหลังทุกกรณี</li>';
+			str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+			str += '</ul></div>';
+			str += '<div>ทำรายการเมื่อ : '+dateString+'</div>';
+		} else if(sSendAnswer==3) { 
+			str += '<div class="btn-t9" style="margin-top:20px;cursor: none;">ยืนยันการทำรายการของคุณ</div>';
+			str += '<div class="text-name"><b>'+sessionStorage.getItem("EmpName")+'</b><br>'+sessionStorage.getItem("EmpBranch")+'';
+			str += '<br>'+sessionStorage.getItem("EmpZone")+'<br>'+sessionStorage.getItem("EmpRH")+'';
+			str += '</div>';
+			str += '<div class="btn-t7" style="margin:15px 0;">คุณได้เลือก<br>ยืนยันไม่เข้าร่วมทริปและ<br>ขอรับรางวัลเป็นเงินสด<br>เรียบร้อยแล้ว</div>';
+			str += '<div class="text-notrip" style="font-size: 11px; color:#002d63;text-align:left;">';
+			str += '<ul style="margin-left:-30px;">';
+			str += '<li>ผู้ได้รับรางวัลจะได้รับรางวัลเป็นเงินสด 80% ของมูลค่าทริป (มูลค่าทริป 85,000 x 80% = 68,000 บาท)</li>';
+			str += '<li>เงินรางวัลจะโอนเข้าบัญชีพนักงานในรอบเดือนพฤษภาคม 2565</li>';
+			str += '<li>พรูเด็นเชียลประกันชีวิตจะเป็นผู้รับผิดชอบภาษีเงินได้ ตามฐานเงินเดือนของพนักงาน</li>';
+			str += '<li>กรณียืนยันการรับเป็นเงินสด 80% แล้วจะไม่สามารถ เปลี่ยนแปลงขอเข้าร่วมเดินทางได้ในภายหลังทุกกรณี</li>';
+			str += '<li>คำตัดสินของผู้บริหาร BBD และ Prudential ถือเป็นที่สิ้นสุด</li>';
+			str += '</ul></div>';
+			str += '<div>ทำรายการเมื่อ : '+dateString+'</div>';
+		}
+    	$("#DisplayResult").html(str);  
+    	CheckTripPrudential();
+		document.getElementById('id01').style.display='block';
+	}
+}
+
+
+
+
+function buttonRemove() {
+  var element = document.getElementById("SendAns");
+  element.classList.remove("btn-t0");
+  var element = document.getElementById("SendAns");
+  element.classList.add("btn-t1");
+}
+
+
+
+$("ShowTrip").on("click", "#btnOK", function() {
+  $("#MsgOK").toggle(); /*shows or hides #box*/
+  /*$(this) refers to the targeted element: #toggleMessage*/
+  var text = $(this).text();
+  
+  if (text=="Show") { /*if text inside #toggleMessage is Show...*/
+    $(this).text("Hide"); /*Change button text to Hide*/
+  }
+  else {
+    $(this).text("Show"); /*Change button text to Show*/
+  }
+});
+
+function CloseAll() {
+	document.getElementById('id01').style.display='none';
+}
+
+
+
+
+function showHideDiv(ele) {
+	var srcElement = document.getElementById(ele);
+	if (srcElement != null) {
+	    if (srcElement.style.display == "block") {
+	        srcElement.style.display = 'none';
+	    }
+	    else {
+	        srcElement.style.display = 'block';
+	    }
+	    return false;
+	}
+}
+
+
+
+
+function NewDate() {
+  var today = new Date();
+  var day = today.getDate() + "";
+  var month = (today.getMonth() + 1) + "";
+  var year = today.getFullYear() + "";
+  var hour = today.getHours() + "";
+  var minutes = today.getMinutes() + "";
+  var seconds = today.getSeconds() + "";
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  day = checkZero(day);
+  month = checkZero(month);
+  year = checkZero(year);
+  hour = checkZero(hour);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  dateString = day + "/" + month + "/" + year + " " + hour + ":" + minutes + ":" + seconds +" "+ ampm;
+}
+
+
+function checkZero(data){
+  if(data.length == 1){
+    data = "0" + data;
+  }
+  return data;
+}
+
