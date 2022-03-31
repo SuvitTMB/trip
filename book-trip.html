@@ -70,7 +70,10 @@
       <center>
         <div style="margin-top:10px; color:#ff0000; font-size: 12px;margin-top:20px;font-weight: 600;">ผู้ได้สิทธิ์สามารถทำการตอบแบบสำรวจได้เพียงครั้งเดียว<br>ขอให้ตอบภายแบบสอบถามระหว่างวันที่ 1 – 4 เม.ย. 65
  นี้<br>และการตอบนี้จะไม่สามารถเปลี่ยนแปลงได้อีก<br>ขอให้ทำการตัดสินใจก่อนเข้าทำแบบสำรวจทริปนี้</div>
-        <div class="btn-t1" style="margin-top:20px;" onclick="CheckTripPrudential()">ทำแบบสำรวจทริปของคุณ</div>
+        <div class="btn-t1" style="margin-top:20px;font-size: 11px;" onclick="CheckTripPrudential()">ทำแบบสำรวจทริปของคุณ</div>
+
+        <div class="btn-t2" style="font-size: 11px;" onClick="showHideDiv('divMsg3')"/>ดูรายละเอียดทริปท่องเที่ยว</div>
+        <div id="divMsg3" style="margin-top:20px;display:none;"><img src="./img/trip-tour.jpg" style="width:100%;"></div>
       </center>
     </div>
   </session>
@@ -97,7 +100,7 @@
       <div class="btn-t2" id="btnOK" style="margin-top:-30px;font-size:11px;margin-left:44px;background-color: #0ac71a;border: 1px solid #fff;" onClick="showHideDiv('divMsg')"/>ดูรายละเอียดและเงื่อนไขเพิ่มเติม</div>
       <div class="text-trip" id="divMsg" style="font-size: 11px; color:#002d63;margin-top:20px;display:none;">
         <ul style="margin-left:-30px;">
-          <li>ทริปท่องเที่ยวประเทศเนเธอแลนด์-เบลเยี่ยม จำนวน 8 วัน 5 คืน กำหนดเดินทางช่วงเดือนมิถุนายน 2565</li>
+          <li>ทริปท่องเที่ยวประเทศเนเธอแลนด์-เบลเยี่ยม จำนวน 8 วัน 5 คืน กำหนดเดินทางช่วงเดือนพฤษภาคม-มิถุนายน 2565</li>
           <li>ผู้ได้รับรางวัลต้องคงสภาพการเป็นพนักงาน ttb จนถึงวันเดินทาง</li>
           <li>ผู้ได้รับรางวัลจะต้องมีพาสปอร์ตที่มีอายุการใช้งานคงเหลือไม่น้อยกว่า 6 เดือน นับจากวันเดินทางกลับ กรณียังไม่มีพาสปอร์ตหรือหมดอายุ ขอให้รีบดำเนินการ</li>
           <li>ผู้ได้รับรางวัลจะต้องรับผิดชอบค่าใช้จ่ายอื่นๆ ที่เกี่ยวข้องด้วยตนเอง เช่น ค่าทำพาสปอร์ต , ค่าเดินทางมาทำวีซ่า , ค่าเดินทางมาเข้าร่วมทริป , ค่าใช้จ่ายส่วนตัวระหว่างทริป , ค่าตรวจโควิด-19 (ถ้ามี)</li>
